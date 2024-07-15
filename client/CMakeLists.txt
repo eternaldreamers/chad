@@ -1,7 +1,7 @@
-add_executable(<client-name>Client
-  <project-name>.cpp
+add_executable(chadClient
+  chad.cpp
 )
 
-target_include_directories(<project-name>Client PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(<project-name>Client PUBLIC <project-name>Shared)
+target_include_directories(chadClient PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(chadClient PUBLIC chadShared)
 

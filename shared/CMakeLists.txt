@@ -1,5 +1,5 @@
-add_library(<project-name>Shared
-  <project-name>.cpp
+add_library(chadShared
+  chad.cpp
 )
 
-target_include_directories(<project-name>Shared PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(chadShared PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

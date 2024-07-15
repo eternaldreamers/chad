@@ -1,0 +1,2 @@
+/nix/store/a9kr77jici5pfcv8hprqncnmjlsrjhi4-gcc-wrapper-12.3.0/bin/ar qc libchadShared.a CMakeFiles/chadShared.dir/chad.cpp.o
+/nix/store/a9kr77jici5pfcv8hprqncnmjlsrjhi4-gcc-wrapper-12.3.0/bin/ranlib libchadShared.a

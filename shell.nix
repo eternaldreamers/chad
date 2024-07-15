@@ -2,12 +2,8 @@
 
 pkgs.mkShell {
   buildInputs = [
-    pkgs.clang
+    pkgs.ccls
     pkgs.cmake
   ];
  
-  shellHook = ''
-    export CC=clang
-    export CXX=clang++
-  '';
 }
