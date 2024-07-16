@@ -1,4 +1,4 @@
-enum class FileType {
+enum class contentType {
     TextPlain,
     TextCode,
     File
