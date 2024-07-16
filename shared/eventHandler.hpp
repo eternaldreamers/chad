@@ -4,9 +4,9 @@
 class EventHander {
   public:
     virtual ~EventHandler() = default;
-    virtual void handleRead(int handler);
-    virtual void handleWrite(int handler);
-    virtual void handleException(int handler);
+    virtual void handleRead(int handle);
+    virtual void handleWrite(int handle);
+    virtual void handleException(int handle);
 };
 
 #endif

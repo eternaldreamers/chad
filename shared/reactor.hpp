@@ -38,13 +38,13 @@ class Reactor {
     ~Reactor();
 
     void registerEventHandler(
-      int handler,
+      int handle,
       EventHandler* eventHandler,
       unsigned int eventTypeMask,
       bool oneShot = false
     );
     void unregisterEventHandler(
-      int handler,
+      int handle,
       unsigned int eventTypeMask
     );
     void handleEvents(const struct timeval* timeout = nullptr);
