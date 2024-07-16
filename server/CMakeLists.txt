@@ -3,5 +3,5 @@ add_executable(chadServer
 )
 
 target_include_directories(chadServer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(chadServer PUBLIC chadShared)
+target_link_libraries(chadServer PUBLIC pthread chadShared)
 
