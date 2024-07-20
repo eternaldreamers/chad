@@ -9,7 +9,9 @@
 std::vector<ssh_session> sessions;
 std::mutex session_mutex;
 
-void handle_client(ssh_session session) {
+ssh_session session;
+
+void handle_client() {
     ssh_channel channel = ssh_channel_new(session);
   if (channel == nullptr) {
         std::cerr << "Error creating channel: " << ssh_get_error(session) << std::endl;
@@ -86,7 +88,7 @@ int main() {
     std::cout << "Server listening on port 2222..." << std::endl;
 
     while (true) {
-        ssh_session session = ssh_new();
+        session = ssh_new();
         if (ssh_bind_accept(sshbind, session) == SSH_OK) {
             std::cout << "New session accepted" << std::endl;
 
@@ -99,7 +101,7 @@ int main() {
 
             std::lock_guard<std::mutex> lock(session_mutex);
             sessions.push_back(session);
-            std::thread(handle_client, session).detach();
+            std::thread(handle_client).detach();
         } else {
             std::cerr << "Error accepting session: " << ssh_get_error(sshbind) << std::endl;
             ssh_free(session);
